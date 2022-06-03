@@ -234,24 +234,22 @@
     .contact-item{
         text-align: center;
     }
-    .main-content{
+    .main-content {
         min-height: 1000px;
+        width: 90%;
+        margin: 20px auto;
         display: grid;
         grid-template-columns: 300px 700px;
-        width: 90%;
     }
-    @media  screen and (max-width:674px) {
-        .main-content{
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
+   
     
     .left-section{
         background-color: rgb(111, 104, 104);
+        grid-column: span 1;
     }
     .right-section{
         background-color: rgb(168, 168, 185);
-        
+        grid-column: span 1 / span 2;
         
     }   
 
@@ -277,7 +275,7 @@
     }
 
     .designation{
-        font-size: 0.75rem;
+        font-size: 1rem;
         text-align: center;
         text-transform: uppercase;
         padding-bottom: 0.5rem;
@@ -288,8 +286,11 @@
         text-align: center;
         padding: 1rem;
     }
-    @media all (max-width:674px){
-        
+    @media screen and (min-width: 0px)and (max-width: 673px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
+  }
     
 </style>
